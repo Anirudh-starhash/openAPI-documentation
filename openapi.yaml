@@ -1,0 +1,211 @@
+openapi: 3.0.0
+info:
+  title: Open API Documentation
+  version: 1.0.0
+  description: >
+    Documentation example you can add various **documentation** here.It takes
+    both markdown and HTML
+
+    <h2> ER diagram </h2>
+
+    <img
+    src="https://upload.wikimedia.org/wikipedia/commons/7/72/ER_Diagram_MMORPG.png">
+
+    <h2> Error codes </h2> <table>
+       <thead>
+              <th> Resource </th>
+              <th> Error Code </th>
+              <th> Message </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Resource </td>
+                <td> Error Code </td>
+                <td> Message </td>
+            </tr>
+        </tbody>
+    </table>
+
+servers:
+  - url: http://127.0.0.1:5000/
+paths:
+  /api/user/{username}:
+    description: >-
+      End point to read, update and delete a user resourc with username
+    get:
+      description: operation to get user details
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+            example: all
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                title: user object
+                type: object
+                properties:
+                  user_id:
+                    type: integer
+                    example: 201
+                  username:
+                    type: string
+                    example: all
+                  email:
+                    type: string
+                    example: all@example.com
+        '400':
+          description: Bad Request
+          content:
+            applictaion/json:
+             schema:
+              type: object
+              properties:
+               error_code:
+                type: string
+               error_message:
+                type: string
+        '404':
+          description: Resource Not Found
+        '500':
+          description: Internal Server Error
+    put:
+     description: operation to get user details
+     parameters:
+      - in: path
+        name: username
+        required: true
+        schema:
+          type: string
+          example: all
+     responses:
+      '200':
+        description: Success
+        content:
+          application/json:
+            schema:
+              title: user object
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  example: 201
+                username:
+                  type: string
+                  example: all
+                email:
+                  type: string
+                  example: all@example.com
+      '400':
+          description: Bad Request
+          content:
+            applictaion/json:
+             schema:
+              type: object
+              properties:
+               error_code:
+                type: string
+               error_message:
+                type: string
+      '404':
+          description: Resource Not Found
+      '500':
+          description: Internal Server Error
+    post:
+     description: operation to get user details
+     parameters:
+      - in: path
+        name: username
+        required: true
+        schema:
+          type: string
+          example: all
+     responses:
+      '200':
+        description: Success
+        content:
+          application/json:
+            schema:
+              title: user object
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  example: 201
+                username:
+                  type: string
+                  example: all
+                email:
+                  type: string
+                  example: all@example.com
+      '400':
+          description: Bad Request
+          content:
+            applictaion/json:
+             schema:
+              type: object
+              properties:
+               error_code:
+                type: string
+               error_message:
+                type: string
+      '404':
+          description: Resource Not Found
+      '500':
+          description: Internal Server Error
+    delete:
+     description: operation to get user details
+     parameters:
+      - in: path
+        name: username
+        required: true
+        schema:
+          type: string
+          example: all
+     responses:
+      '200':
+        description: Success
+        content:
+          application/json:
+            schema:
+              title: user object
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  example: 201
+                username:
+                  type: string
+                  example: all
+                email:
+                  type: string
+                  example: all@example.com
+      '400':
+          description: Bad Request
+          content:
+            applictaion/json:
+             schema:
+              type: object
+              properties:
+               error_code:
+                type: string
+               error_message:
+                type: string
+      '404':
+          description: Resource Not Found
+      '500':
+          description: Internal Server Error
+    
+    
+        
+        
+                          
+                    
+            
+              
+     
